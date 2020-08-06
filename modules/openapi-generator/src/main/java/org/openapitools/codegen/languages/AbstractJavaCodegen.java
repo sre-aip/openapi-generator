@@ -1180,10 +1180,20 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
             codegenModel.imports.add("JsonSubTypes");
             codegenModel.imports.add("JsonTypeInfo");
         }
-        if (allDefinitions != null && codegenModel.parentSchema != null && codegenModel.hasEnums) {
+        if (allDefinitions != null && codegenModel.parentSchema != null) {
             final Schema parentModel = allDefinitions.get(codegenModel.parentSchema);
             final CodegenModel parentCodegenModel = super.fromModel(codegenModel.parent, parentModel);
-            codegenModel = AbstractJavaCodegen.reconcileInlineEnums(codegenModel, parentCodegenModel);
+            if (codegenModel.hasEnums) {
+                codegenModel = AbstractJavaCodegen.reconcileInlineEnums(codegenModel, parentCodegenModel);
+            }
+            // add parent vars
+            for (final CodegenProperty property : parentCodegenModel.vars) {
+                final CodegenProperty parentVar = property.clone();
+                parentVar.isInherited = true;
+                parentVar.hasMore = true;
+                LOGGER.info("adding parent variable {}", property.name);
+                codegenModel.parentVars.add(parentVar);
+            }
         }
         if ("BigDecimal".equals(codegenModel.dataType)) {
             codegenModel.imports.add("BigDecimal");

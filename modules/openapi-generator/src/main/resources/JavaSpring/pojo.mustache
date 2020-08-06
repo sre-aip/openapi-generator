@@ -94,6 +94,15 @@ public class {{classname}} {{#parent}}extends {{{parent}}}{{/parent}}{{^parent}}
 
   {{/vars}}
 
+  {{#parentVars}}
+
+  public {{classname}} {{name}}({{{datatypeWithEnum}}} {{name}}) {
+    super.{{name}}({{name}});
+    return this;
+  }
+
+  {{/parentVars}}
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {

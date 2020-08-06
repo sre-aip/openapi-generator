@@ -61,12 +61,12 @@
     </issueManagement>
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>aip-snapshots</id>
+            <url>https://alb-nexus.dev.aip.sreitdev.com/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>aip-releases</id>
+            <url>https://alb-nexus.dev.aip.sreitdev.com/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
     <licenses>

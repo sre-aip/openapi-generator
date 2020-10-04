@@ -111,10 +111,10 @@ artifacts {
 publishing {
     repositories {
         maven {
-            url "https://https://github.com/orgs/sre-holdings/packages"
+            url "https://maven.pkg.github.com/sre-holdings/maven-repository"
             credentials {
                 username = "kota65535"
-                password = "df783c90b86b0ce0ff9332d258924b39e2122943"
+                password = "442d4ae204bfc9675a4049470f0a646d53280aa5"
             }
         }
     }

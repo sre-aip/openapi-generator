@@ -76,8 +76,8 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
     protected String developerEmail = "team@openapitools.org";
     protected String developerOrganization = "OpenAPITools.org";
     protected String developerOrganizationUrl = "http://openapitools.org";
-    protected String scmConnection = "scm:git:git@github.com:openapitools/openapi-generator.git";
-    protected String scmDeveloperConnection = "scm:git:git@github.com:openapitools/openapi-generator.git";
+    protected String scmConnection = "scm:git:https://github.com/sre-holdings/openapi-generator";
+    protected String scmDeveloperConnection = "scm:git:https://github.com/sre-holdings/openapi-generator";
     protected String scmUrl = "https://github.com/openapitools/openapi-generator";
     protected String licenseName = "Unlicense";
     protected String licenseUrl = "http://unlicense.org";

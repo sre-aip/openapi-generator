@@ -14,8 +14,8 @@
     <!-- /RELEASE_VERSION -->
     <url>https://github.com/openapitools/openapi-generator</url>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
+        <connection>scm:git:https://github.com/sre-holdings/openapi-generator</connection>
+        <developerConnection>scm:git:https://github.com/sre-holdings/openapi-generator</developerConnection>
         <url>https://github.com/openapitools/openapi-generator</url>
     </scm>
     <developers>

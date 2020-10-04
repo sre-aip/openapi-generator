@@ -38,8 +38,8 @@ sidebar_label: jaxrs-resteasy-eap
 |parentGroupId|parent groupId in generated pom N.B. parentGroupId, parentArtifactId and parentVersion must all be specified for any of them to take effect| |null|
 |parentVersion|parent version in generated pom N.B. parentGroupId, parentArtifactId and parentVersion must all be specified for any of them to take effect| |null|
 |prependFormOrBodyParameters|Add form or body parameters to the beginning of the parameter list.| |false|
-|scmConnection|SCM connection in generated pom.xml| |scm:git:git@github.com:openapitools/openapi-generator.git|
-|scmDeveloperConnection|SCM developer connection in generated pom.xml| |scm:git:git@github.com:openapitools/openapi-generator.git|
+|scmConnection|SCM connection in generated pom.xml| |scm:git:https://github.com/sre-holdings/openapi-generator|
+|scmDeveloperConnection|SCM developer connection in generated pom.xml| |scm:git:https://github.com/sre-holdings/openapi-generator|
 |scmUrl|SCM URL in generated pom.xml| |https://github.com/openapitools/openapi-generator|
 |serializableModel|boolean - toggle &quot;implements Serializable&quot; for generated models| |false|
 |serverPort|The port on which the server should be started| |8080|

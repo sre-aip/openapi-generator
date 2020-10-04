@@ -49,8 +49,8 @@ sidebar_label: spring
 |reactive|wrap responses in Mono/Flux Reactor types (spring-boot only)| |false|
 |responseWrapper|wrap the responses in given type (Future, Callable, CompletableFuture,ListenableFuture, DeferredResult, HystrixCommand, RxObservable, RxSingle or fully qualified type)| |null|
 |returnSuccessCode|Generated server returns 2xx code| |false|
-|scmConnection|SCM connection in generated pom.xml| |scm:git:git@github.com:openapitools/openapi-generator.git|
-|scmDeveloperConnection|SCM developer connection in generated pom.xml| |scm:git:git@github.com:openapitools/openapi-generator.git|
+|scmConnection|SCM connection in generated pom.xml| |scm:git:https://github.com/sre-holdings/openapi-generator|
+|scmDeveloperConnection|SCM developer connection in generated pom.xml| |scm:git:https://github.com/sre-holdings/openapi-generator|
 |scmUrl|SCM URL in generated pom.xml| |https://github.com/openapitools/openapi-generator|
 |serializableModel|boolean - toggle &quot;implements Serializable&quot; for generated models| |false|
 |singleContentTypes|Whether to select only one produces/consumes content-type by operation.| |false|

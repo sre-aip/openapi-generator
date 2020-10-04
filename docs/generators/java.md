@@ -42,8 +42,8 @@ sidebar_label: java
 |performBeanValidation|Perform BeanValidation| |false|
 |playVersion|Version of Play! Framework (possible values &quot;play24&quot; (Deprecated), &quot;play25&quot; (Deprecated), &quot;play26&quot; (Default))| |null|
 |prependFormOrBodyParameters|Add form or body parameters to the beginning of the parameter list.| |false|
-|scmConnection|SCM connection in generated pom.xml| |scm:git:git@github.com:openapitools/openapi-generator.git|
-|scmDeveloperConnection|SCM developer connection in generated pom.xml| |scm:git:git@github.com:openapitools/openapi-generator.git|
+|scmConnection|SCM connection in generated pom.xml| |scm:git:https://github.com/sre-holdings/openapi-generator|
+|scmDeveloperConnection|SCM developer connection in generated pom.xml| |scm:git:https://github.com/sre-holdings/openapi-generator|
 |scmUrl|SCM URL in generated pom.xml| |https://github.com/openapitools/openapi-generator|
 |serializableModel|boolean - toggle &quot;implements Serializable&quot; for generated models| |false|
 |serializationLibrary|Serialization library, default depends from the library|<dl><dt>**jackson**</dt><dd>Use Jackson as serialization library</dd><dt>**gson**</dt><dd>Use Gson as serialization library</dd></dl>|null|

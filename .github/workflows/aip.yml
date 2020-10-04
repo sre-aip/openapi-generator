@@ -27,6 +27,9 @@ jobs:
           git config --global author.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global author.name "${GITHUB_ACTOR}"
       - name: Build with Maven!
+        env:
+          GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           RELEASE_VERSION=${GITHUB_REF##*/}
-          mvn -B release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -Dtag=v${RELEASE_VERSION} -Darguments=-DskipTestsmvn -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN
+          mvn -B --settings .github/workflows/settings.xml release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -Dtag=v${RELEASE_VERSION} -Darguments=-DskipTestsmvn -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN

@@ -3,7 +3,7 @@ name: Java CI
 on:
   push:
     branches:
-      - aip-develop
+      - 'releases/**'
 
 jobs:
   build:
@@ -14,11 +14,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Cache Gradle packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
-          restore-keys: ${{ runner.os }}-gradle
-      - name: Build with Gradle
-        run: ./gradlew build --debug
+      - name: Build with Maven
+        run: |
+          RELEASE_VERSION=${GITHUB_REF##*/}
+          mvn -B release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -Dtag=v${RELEASE_VERSION} -Darguments=-DskipTestsmvn

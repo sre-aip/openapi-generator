@@ -53,10 +53,10 @@ repositories {
     jcenter()
     repositories {
         maven {
-            url "https://alb-nexus.dev.aip.sreitdev.com/repository/maven-snapshots/"
+            url "https://https://github.com/orgs/sre-holdings/packages"
             credentials {
-                username = "${aipNexusUsername}"
-                password = "${aipNexusPassword}"
+                username = "kota65535"
+                password = "df783c90b86b0ce0ff9332d258924b39e2122943"
             }
         }
     }
@@ -111,10 +111,10 @@ artifacts {
 publishing {
     repositories {
         maven {
-            url "https://alb-nexus.dev.aip.sreitdev.com/repository/maven-snapshots/"
+            url "https://https://github.com/orgs/sre-holdings/packages"
             credentials {
-                username = "${aipNexusUsername}"
-                password = "${aipNexusPassword}"
+                username = "kota65535"
+                password = "df783c90b86b0ce0ff9332d258924b39e2122943"
             }
         }
     }

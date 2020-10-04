@@ -62,12 +62,12 @@
     </issueManagement>
     <distributionManagement>
         <snapshotRepository>
-            <id>aip-snapshots</id>
-            <url>https://alb-nexus.dev.aip.sreitdev.com/repository/maven-snapshots/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/sre-holdings</url>
         </snapshotRepository>
         <repository>
-            <id>aip-releases</id>
-            <url>https://alb-nexus.dev.aip.sreitdev.com/repository/maven-releases/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/sre-holdings</url>
         </repository>
     </distributionManagement>
     <licenses>

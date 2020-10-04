@@ -63,11 +63,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/sre-holdings</url>
+            <url>https://maven.pkg.github.com/sre-holdings/maven-repository</url>
         </snapshotRepository>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/sre-holdings</url>
+            <url>https://maven.pkg.github.com/sre-holdings/maven-repository</url>
         </repository>
     </distributionManagement>
     <licenses>

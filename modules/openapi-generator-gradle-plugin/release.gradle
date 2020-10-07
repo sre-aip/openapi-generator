@@ -1,0 +1,51 @@
+def writeVersionFile(version) {
+    File f = file("gradle.properties")
+    String s = f.getText().replaceFirst(/openApiGeneratorVersion=.*/, "openApiGeneratorVersion=${version}")
+    f.setText(s)
+}
+
+task setReleaseVersion {
+    doFirst {
+        def matcher = version =~ /^(\d+)\.(\d+)\.(\d+)-(\d+)-SNAPSHOT$/
+        assert matcher.matches(), "Invalid version: ${version}"
+        def (major, minor, patch, buildNumber) = matcher[0][1..4].collect { v -> v as Integer}
+        // set new version
+        version = "${major}.${minor}.${patch}-${buildNumber}"
+        writeVersionFile(version)
+    }
+}
+
+task setDevelopmentVersion {
+    doFirst {
+        def matcher = version =~ /^(\d+)\.(\d+)\.(\d+)-(\d+)$/
+        assert matcher.matches(), "Invalid version: ${version}"
+        def (major, minor, patch, buildNumber) = matcher[0][1..4].collect { v -> v as Integer}
+        // set new version
+        version = "${major}.${minor}.${patch}-${buildNumber + 1}-SNAPSHOT"
+        writeVersionFile(version)
+    }
+}
+
+// Prepare for release.
+// - set release version & tag
+// - build
+// - push
+task prepareRelease {
+    dependsOn setReleaseVersion, build
+    doFirst {
+        def tag = "v${version}"
+        exec { commandLine "git", "push", "origin", "HEAD" }
+        exec { commandLine "git", "push", "origin", "${tag}" }
+    }
+}
+
+// Perform release.
+// - publish
+// - set next development version
+// - push
+task performRelease {
+    dependsOn publish, setDevelopmentVersion
+    doFirst {
+        exec { commandLine "git", "push", "origin", "HEAD" }
+    }
+}

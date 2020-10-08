@@ -43,7 +43,7 @@ jobs:
           mvn -B deploy -DskipTests
           (
             cd modules/openapi-generator-gradle-plugin
-            ./gradlew publishPluginMavenPublicationToMavenRepository
+            ./gradlew publishPluginMavenPublicationToMavenRepository publishOpenApiGeneratorPluginMarkerMavenPublicationToMavenRepository
           )
       - name: Set next development versions
         run: |

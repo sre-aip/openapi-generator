@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'sre-master'
-    paths-ignore:
-      - '.github/**'
 
 jobs:
   build:
@@ -41,7 +39,12 @@ jobs:
           git add .
           git commit -m "prepare release"
       - name: Release
-        run: mvn -B deploy -DskipTests
+        run: |
+          mvn -B deploy -DskipTests
+          (
+            cd modules/openapi-generator-gradle-plugin
+            ./gradlew publishPluginMavenPublicationToMavenRepository
+          )
       - name: Set next development versions
         run: |
           mvn -B build-helper:parse-version versions:set versions:commit \

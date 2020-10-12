@@ -3,7 +3,8 @@ name: Sync master
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 2 * * *
+    # Every 2:00 on Monday
+    - cron: 0 2 1 * *
 
 jobs:
   syncMaster:

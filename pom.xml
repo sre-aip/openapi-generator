@@ -14,8 +14,8 @@
     <!-- /RELEASE_VERSION -->
     <url>https://github.com/openapitools/openapi-generator</url>
     <scm>
-        <connection>scm:git:https://github.com/sre-holdings/openapi-generator</connection>
-        <developerConnection>scm:git:https://github.com/sre-holdings/openapi-generator</developerConnection>
+        <connection>scm:git:https://github.com/sre-aip/openapi-generator</connection>
+        <developerConnection>scm:git:https://github.com/sre-aip/openapi-generator</developerConnection>
         <url>https://github.com/openapitools/openapi-generator</url>
       <tag>HEAD</tag>
   </scm>
@@ -68,11 +68,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/sre-holdings/maven-repository</url>
+            <url>https://maven.pkg.github.com/sre-aip/maven-repository</url>
         </snapshotRepository>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/sre-holdings/maven-repository</url>
+            <url>https://maven.pkg.github.com/sre-aip/maven-repository</url>
         </repository>
     </distributionManagement>
     <licenses>

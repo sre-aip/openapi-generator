@@ -54,7 +54,7 @@ repositories {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/sre-holdings/maven-repository"
+            url = "https://maven.pkg.github.com/sre-aip/maven-repository"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
@@ -112,7 +112,7 @@ artifacts {
 publishing {
     repositories {
         maven {
-            url "https://maven.pkg.github.com/sre-holdings/maven-repository"
+            url "https://maven.pkg.github.com/sre-aip/maven-repository"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")

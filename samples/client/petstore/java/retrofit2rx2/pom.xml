@@ -9,8 +9,8 @@
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>
-        <connection>scm:git:https://github.com/sre-holdings/openapi-generator</connection>
-        <developerConnection>scm:git:https://github.com/sre-holdings/openapi-generator</developerConnection>
+        <connection>scm:git:https://github.com/sre-aip/openapi-generator</connection>
+        <developerConnection>scm:git:https://github.com/sre-aip/openapi-generator</developerConnection>
         <url>https://github.com/openapitools/openapi-generator</url>
     </scm>
 

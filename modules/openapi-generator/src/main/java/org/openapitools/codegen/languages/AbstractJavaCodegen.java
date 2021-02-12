@@ -1190,7 +1190,6 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
             for (final CodegenProperty property : parentCodegenModel.vars) {
                 final CodegenProperty parentVar = property.clone();
                 parentVar.isInherited = true;
-                parentVar.hasMore = true;
                 LOGGER.info("adding parent variable {}", property.name);
                 codegenModel.parentVars.add(parentVar);
             }

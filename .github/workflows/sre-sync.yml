@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # Every 2:00 on Monday
-    - cron: 0 2 1 * *
+    - cron: 0 2 * * 1
 
 jobs:
   syncMaster:

@@ -7,8 +7,8 @@
     <name>petstore-resteasy</name>
     <version>1.0.0</version>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
+        <connection>scm:git:https://github.com/sre-aip/openapi-generator</connection>
+        <developerConnection>scm:git:https://github.com/sre-aip/openapi-generator</developerConnection>
         <url>https://github.com/openapitools/openapi-generator</url>
     </scm>
 
